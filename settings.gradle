@@ -1,1 +1,2 @@
-include ':imageencryptor'
+include ':app'
+include ':openCVLibrary310'

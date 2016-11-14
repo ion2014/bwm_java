@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -19,9 +20,9 @@ import java.io.FileNotFoundException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView photo1;
-    private ImageView photo2;
-    private Button next;
+    private MyImageView photo1;
+    private MyImageView photo2;
+    private ImageButton next;
     private int SELECT_PICTURE = 0; // 从图库中选择图片
     private Bitmap bmp;
     private boolean flag1 = false;
@@ -35,11 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void init() {
-        photo1 = (ImageView) findViewById(R.id.imageView1);
+        photo1 = (MyImageView) findViewById(R.id.imageView1);
         photo1.setOnClickListener(this);
-        photo2 = (ImageView) findViewById(R.id.imageView2);
+        photo2 = (MyImageView) findViewById(R.id.imageView2);
         photo2.setOnClickListener(this);
-        next = (Button)findViewById(R.id.next);
+        next = (ImageButton)findViewById(R.id.next);
         next.setOnClickListener(this);
 
     }
@@ -145,4 +146,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }).create();
         dialog.show();
     }
+
+
 }
+

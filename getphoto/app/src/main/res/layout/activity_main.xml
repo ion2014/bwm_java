@@ -11,35 +11,31 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.lenovo.getphoto.MainActivity">
 
-    <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        app:srcCompat="@android:drawable/ic_input_add"
+    <com.example.lenovo.getphoto.MyImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:src = "@drawable/add"
         android:id="@+id/imageView1"
-        android:layout_marginLeft="30dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:src = "@drawable/commit"
+        android:id="@+id/next"
         android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
-    <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        app:srcCompat="@android:drawable/ic_input_add"
+    <com.example.lenovo.getphoto.MyImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:src = "@drawable/add"
         android:id="@+id/imageView2"
-        android:layout_alignTop="@+id/imageView1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="30dp"
-        android:layout_marginEnd="30dp" />
-
-    <Button
-        android:text="Next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/next"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="44dp"
-        android:id="@+id/next" />
+        android:layout_marginTop="29dp" />
 
 </RelativeLayout>
